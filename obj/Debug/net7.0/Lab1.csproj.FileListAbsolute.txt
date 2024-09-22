@@ -1,0 +1,14 @@
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\bin\Debug\net7.0\Lab1.exe
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\bin\Debug\net7.0\Lab1.deps.json
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\bin\Debug\net7.0\Lab1.runtimeconfig.json
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\bin\Debug\net7.0\Lab1.dll
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\bin\Debug\net7.0\Lab1.pdb
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\Lab1.GeneratedMSBuildEditorConfig.editorconfig
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\Lab1.AssemblyInfoInputs.cache
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\Lab1.AssemblyInfo.cs
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\Lab1.csproj.CoreCompileInputs.cache
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\Lab1.dll
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\refint\Lab1.dll
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\Lab1.pdb
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\Lab1.genruntimeconfig.cache
+c:\Programs\C#_programs\7sem_task1\7sem_evolution_1task\obj\Debug\net7.0\ref\Lab1.dll

@@ -1,38 +1,43 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\n1117\\.nuget\\packages\\": {}
+    "C:\\Users\\main\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "0.1.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\Lab1.csproj",
+      "projectUniqueName": "C:\\Programs\\C#_programs\\7sem_task1\\7sem_evolution_1task\\Lab1.csproj",
       "projectName": "EvolutionTask1",
-      "projectPath": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\Lab1.csproj",
-      "packagesPath": "C:\\Users\\n1117\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\obj\\",
+      "projectPath": "C:\\Programs\\C#_programs\\7sem_task1\\7sem_evolution_1task\\Lab1.csproj",
+      "packagesPath": "C:\\Users\\main\\.nuget\\packages\\",
+      "outputPath": "C:\\Programs\\C#_programs\\7sem_task1\\7sem_evolution_1task\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\n1117\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\main\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -40,16 +45,11 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
