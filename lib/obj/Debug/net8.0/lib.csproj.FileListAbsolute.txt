@@ -1,0 +1,12 @@
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\bin\Debug\net8.0\lib.deps.json
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\bin\Debug\net8.0\lib.dll
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\bin\Debug\net8.0\lib.pdb
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.AssemblyInfoInputs.cache
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.AssemblyInfo.cs
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.csproj.CoreCompileInputs.cache
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.sourcelink.json
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.dll
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\refint\lib.dll
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.pdb
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\ref\lib.dll
