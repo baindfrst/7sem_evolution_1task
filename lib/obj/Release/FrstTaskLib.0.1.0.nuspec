@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FrstTaskLib</id>
+    <version>0.1.0</version>
+    <authors>lib</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="c0408fb46f54b575022d4c171d35d4906c5f98e4" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\bin\Release\net8.0\lib.dll" target="lib\net8.0\lib.dll" />
+  </files>
+</package>
