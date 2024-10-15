@@ -5,6 +5,12 @@ public class Genom
     public int[] cityNumberConections { get; set; }
     public int GenomScore { get; set; }
 
+    public Genom(int GenomScore, int[] cityNumberConections)
+    {
+        this.GenomScore = GenomScore;
+        this.cityNumberConections = new int[cityNumberConections.Length];
+        cityNumberConections.CopyTo(this.cityNumberConections, 0);
+    }
     public Genom(int len_genom)
     {
         cityNumberConections = new int[len_genom];
@@ -25,14 +31,15 @@ public class Genom
         }
     }
 
-    public int CalculateGenomScore(int[][] CityMap)
+    public int CalculateGenomWayLenght(int[][] CityMap)
     {
-        GenomScore = 0;
-        for (int i = 0; i < cityNumberConections.Length; i++)
+        int GenomScoreInFunc = CityMap[0][cityNumberConections[0]];
+        for (int i = 1; i < cityNumberConections.Length; i++)
         {
-            GenomScore += CityMap[i][cityNumberConections[i]];
+            GenomScoreInFunc += CityMap[cityNumberConections[i-1]][cityNumberConections[i]];
         }
-        return GenomScore;
+        GenomScore = GenomScoreInFunc;
+        return GenomScoreInFunc;
     }
 
     public void GenomMutation()
@@ -52,5 +59,9 @@ public class Genom
     public override string ToString()
     {
         return "0->" + string.Join("->", cityNumberConections);
+    }
+    public Genom ClonePopulation()
+    {
+        return new Genom(GenomScore, cityNumberConections);
     }
 }

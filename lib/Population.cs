@@ -4,10 +4,12 @@ public class Population
 {
     public int numEpoch { get; set; }
     public Genom[] genArray { get; set; }
+    public Genom bestGen { get; set; }
     public List<int> genomsresult { get; set; }
     public int[][] WayLengMap { get; set; }
     public int resultsolution = -1;
     public int learningRate = 0;
+    public int numPopulation;
 
     /// <summary>
     /// Эта функция создает популяию
@@ -15,7 +17,7 @@ public class Population
     /// <param name="count_population">Количество генов в популяции</param>
     /// <param name="cityMap">Матрица расстояний между городами</param>
     /// <param name="lr">максимальный кол-во мутаций</param>
-    public Population(int count_population, int[][] cityMap, int lr)
+    public Population(int count_population, int[][] cityMap, int lr, int numPopulation = 1)
     {
         learningRate = lr;
         genomsresult = new List<int>();
@@ -25,18 +27,27 @@ public class Population
         {
             genArray[i] = new Genom(cityMap.Length);
         }
-        WayLengMap = cityMap;
+
+
+        WayLengMap = new int[cityMap.Length][];
+        for (int i = 0; i != cityMap.Length; i++)
+        {
+            WayLengMap[i] = new int[cityMap.Length];
+            WayLengMap[i] = (int[])cityMap[i].Clone();
+        }
+        bestGen = genArray[this.CalculateSolutionsLenght()];
+        this.numPopulation = numPopulation;
     }
 
-    public int CalculateSolutionsScore()
+    public int CalculateSolutionsLenght()
     {
         genomsresult.Clear();
         foreach (Genom gen in genArray)
         {
-            genomsresult.Add(gen.CalculateGenomScore(WayLengMap));
+            genomsresult.Add(gen.CalculateGenomWayLenght(WayLengMap));
         }
 
-        return genomsresult.Min();
+        return genomsresult.IndexOf(genomsresult.Min());
     }
 
 
@@ -52,9 +63,9 @@ public class Population
         }
         for (int i = 0; i < mutatitionLr; i++)
         {
-            this.CreateNewGenom();
+            this.MutateRandomGen();
         }
-
+        this.CalculateSolutionsLenght();
         numEpoch += 1;
         return numEpoch;
 
@@ -62,12 +73,13 @@ public class Population
 
     public string GetEpochResult()
     {
-        return $"Epoch: {numEpoch}, best result is: {genomsresult.Min()} at genom\n {genArray[genomsresult.IndexOf(genomsresult.Min())]}\n";
+        return $"population number {numPopulation}: Epoch: {numEpoch}, best result is: {this.resultsolution} at genom\n {this.bestGen}\n";
     }
 
-    public void StartPopulationEvolution()
+    public void StartPopulationEvolution(ref Genom outputGenom)
     {
-        resultsolution = this.CalculateSolutionsScore();
+        this.CalculateSolutionsLenght();
+        resultsolution = this.genomsresult.Min();
         bool loop = false;
         Console.CancelKeyPress += (sender, e) =>
         {
@@ -82,9 +94,14 @@ public class Population
                 break;
             }
             this.GenNewEpoch();
-            if (this.genomsresult.Min() < resultsolution)
+            if(resultsolution > this.genomsresult.Min())
             {
                 resultsolution = this.genomsresult.Min();
+            }
+            if (outputGenom.CalculateGenomWayLenght(WayLengMap) > this.genomsresult.Min())
+            {
+                resultsolution = this.genomsresult.Min();
+                outputGenom = this.genArray[genomsresult.IndexOf(resultsolution)].ClonePopulation();
                 Console.WriteLine(this.GetEpochResult());
             }
         }
@@ -103,8 +120,8 @@ public class Population
 
     private void CreateNewGenom()
     {
-        genArray[genomsresult.IndexOf(genomsresult.Max())] = new Genom(WayLengMap.Length);
-        this.CalculateSolutionsScore();
+        int i_genom_new = genomsresult.IndexOf(genomsresult.Max());
+        genArray[i_genom_new] = new Genom(WayLengMap.Length);
     }
 
     private void MutateRandomGen()

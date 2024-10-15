@@ -13,26 +13,53 @@ internal class main
 {
     static void Main(string[] args)
     {
-        int sizeMatrix = 20;
+        int sizeMatrix = 15;
 
         int[][] testmap = GenMatrixCity(sizeMatrix);
 
-        Population testpopulation = new Population(30, testmap, 10);
-        testpopulation.StartPopulationEvolution();
-    }
-    static public int[][] GenMatrixCity(int size)
-    {
-        int[][] map = new int[size][];
-
-        for( int i = 0; i < size;i++)
+        for (int i = 0; i < sizeMatrix; i++)
         {
-            map[i] = new int[size];
-            Random random = new Random();
-            for( int j = 0; j < size; j++)
+            for (int j = 0; j < sizeMatrix; j++)
             {
-                map[i][j] = random.Next(0, 100);
+                Console.Write(testmap[i][j] + " ");
+            }
+            Console.WriteLine();
+        }
+        MultiPopulationWork MP = new MultiPopulationWork(2, 8, testmap, 4);
+        MP.Run();
+    }
+    public static int[][] GenMatrixCity(int size)
+    {
+        Random random = new Random();
+        int[][] matrix = new int[size][];
+        for (int i = 0; i < size; i++)
+        {
+            matrix[i] = new int[size];
+        }
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = i + 1; j < size; j++)
+            {
+                int distance = random.Next(1, 100);
+                matrix[i][j] = distance;
+                matrix[j][i] = distance;
             }
         }
-        return map;
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = i + 1; j < size; j++)
+            {
+                for (int k = j + 1; k < size; k++)
+                {
+                    if (matrix[i][j] + matrix[j][k] < matrix[i][k])
+                    {
+                        matrix[i][k] = matrix[i][j] + matrix[j][k] + 1;
+                        matrix[k][i] = matrix[i][k];
+                    }
+                }
+            }
+        }
+
+        return matrix;
     }
 }
