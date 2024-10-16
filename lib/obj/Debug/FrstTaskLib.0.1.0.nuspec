@@ -5,12 +5,12 @@
     <version>0.1.0</version>
     <authors>lib</authors>
     <description>Package Description</description>
-    <repository type="git" commit="793f1ed9bd500ba5efb6b32681e55ac286c1dbfc" />
+    <repository type="git" commit="eb4e2e1b68e88715855f51987261267ae7598ae5" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\n1117\CODES_NOTE\SHARP_LAB\sem7_lab1\441_2_prokofev-1\lib\bin\Debug\net8.0\lib.dll" target="lib\net8.0\lib.dll" />
+    <file src="C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\bin\Debug\net8.0\lib.dll" target="lib\net8.0\lib.dll" />
   </files>
 </package>
