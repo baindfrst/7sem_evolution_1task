@@ -10,6 +10,7 @@ public class Population
     public int resultsolution = -1;
     public int learningRate = 0;
     public int numPopulation;
+    public bool loop = false;
 
     /// <summary>
     /// Эта функция создает популяию
@@ -76,20 +77,14 @@ public class Population
         return $"population number {numPopulation}: Epoch: {numEpoch}, best result is: {this.resultsolution} at genom\n {this.bestGen}\n";
     }
 
-    public void StartPopulationEvolution(ref Genom outputGenom)
+    public void StartPopulationEvolution(ref Genom outputGenom, ref bool allstop)
     {
         this.CalculateSolutionsLenght();
         resultsolution = this.genomsresult.Min();
-        bool loop = false;
-        Console.CancelKeyPress += (sender, e) =>
-        {
-            e.Cancel = true;
-            loop = true;
-        };
         Console.WriteLine(this.GetEpochResult());
         while (!Console.KeyAvailable)
         {
-            if (loop)
+            if (allstop)
             {
                 break;
             }
@@ -105,6 +100,7 @@ public class Population
                 Console.WriteLine(this.GetEpochResult());
             }
         }
+        allstop = true;
         Console.WriteLine("\n\n\nПодбор окончен");
         Console.WriteLine(this.GetEpochResult());
     }
@@ -129,4 +125,27 @@ public class Population
         genArray[new Random().Next(0, genArray.Length)].GenomMutation();
     }
 
+
+    public Genom RunMulti(int count)
+    {
+        Genom bestgen = new Genom(WayLengMap.Length);
+        bestgen.CalculateGenomWayLenght(WayLengMap);
+        Console.WriteLine(bestgen.GenomScore);
+        ManualResetEvent cancelEvent = new ManualResetEvent(false);
+        bool allPopulationStop = false;
+        Console.CancelKeyPress += (sender, e) =>
+        {
+            e.Cancel = true;
+            allPopulationStop = true;
+        };
+        Parallel.For(0, count, i =>
+        {
+
+            Population tm = new Population(genArray.Length, WayLengMap, learningRate, i);
+            tm.StartPopulationEvolution(ref bestgen, ref allPopulationStop);
+        });
+        Console.WriteLine("FIN");
+        Console.WriteLine(bestgen.GenomScore);
+        return bestgen;
+    }
 }
