@@ -82,7 +82,7 @@ public class Population
         this.CalculateSolutionsLenght();
         resultsolution = this.genomsresult.Min();
         Console.WriteLine(this.GetEpochResult());
-        while (!Console.KeyAvailable)
+        while (true)
         {
             if (allstop)
             {
@@ -101,7 +101,6 @@ public class Population
             }
         }
         allstop = true;
-        Console.WriteLine("\n\n\nПодбор окончен");
         Console.WriteLine(this.GetEpochResult());
     }
     public override string ToString()
@@ -131,7 +130,7 @@ public class Population
         Genom bestgen = new Genom(WayLengMap.Length);
         bestgen.CalculateGenomWayLenght(WayLengMap);
         Console.WriteLine(bestgen.GenomScore);
-        ManualResetEvent cancelEvent = new ManualResetEvent(false);
+
         bool allPopulationStop = false;
         Console.CancelKeyPress += (sender, e) =>
         {
@@ -140,7 +139,6 @@ public class Population
         };
         Parallel.For(0, count, i =>
         {
-
             Population tm = new Population(genArray.Length, WayLengMap, learningRate, i);
             tm.StartPopulationEvolution(ref bestgen, ref allPopulationStop);
         });
