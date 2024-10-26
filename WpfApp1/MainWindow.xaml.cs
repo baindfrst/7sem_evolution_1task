@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,13 +21,14 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool RunFlag = true;
+        public bool RunFlag = true;
         public MainWindow()
         {
             InitializeComponent();
         }
         private async void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
+            RunFlag = true;
             int count_population, count_city, lr, count_threads = 0;
             count_population = Convert.ToInt32(TextBox1.Text);
             count_city = Convert.ToInt32(TextBox2.Text);
@@ -34,11 +36,6 @@ namespace WpfApp1
             count_threads = Convert.ToInt32(TextBox4.Text);
 
             int[][] city_map_gen = GenMatrixCity(count_city);
-
-            Population population_cr = new Population(count_population, city_map_gen, lr);
-            Genom best_gen = population_cr.bestGen;
-            int[] rez_gen_conection = best_gen.cityNumberConections;
-            int best_score = best_gen.CalculateGenomWayLenght(city_map_gen);
             Point[] points = new Point[count_city];
             Random rand = new Random();
             for (int i = 0; i < count_city; i++)
@@ -47,31 +44,61 @@ namespace WpfApp1
                 double y = rand.NextDouble() * 400;
                 points[i] = new Point(x, y);
             }
-            var plotModel = CreatePlotModel(rez_gen_conection, points);
+            Genom genom_rez = new Genom(count_city);
+            var plotModel = CreatePlotModel(genom_rez.cityNumberConections, points);
             plot.Model = plotModel;
+            await Task.Run(() =>
+            {
+                genom_rez = RunMulti(count_threads, genom_rez, count_population, city_map_gen, lr, plotModel, points);
+            });
+        }
 
-            int count_update = 0;
+        public Genom RunMulti(int count_thread, Genom bestgen, int count_population, int[][] WayLengMap, int lr, PlotModel plot, Point[] points)
+        {
+            bestgen.CalculateGenomWayLenght(WayLengMap);
+            Task.Run(() =>
+            {
+                Debug.WriteLine("START DRAW");
+                PlotDrow(plot, ref bestgen, points, WayLengMap);
+            });
+                Parallel.For(0, count_thread, i =>
+            {
+                Debug.WriteLine("START PODBOR");
+                Population tm = new Population(count_population, WayLengMap, lr, i);
+                tm.StartPopulationEvolution(ref bestgen, ref RunFlag);
+            });
+            Console.WriteLine("FIN");
+            Console.WriteLine(bestgen.GenomScore);
+            return bestgen;
+        }
+
+        private void PlotDrow(PlotModel plot, ref Genom genom, Point[] points, int[][] citymap)
+        {
+            int updates = 0;
+            int score_best = genom.CalculateGenomWayLenght(citymap);
+            Debug.WriteLine(RunFlag);
             while (RunFlag)
             {
-                if (best_score < best_gen.CalculateGenomWayLenght(city_map_gen))
+                if (score_best < genom.CalculateGenomWayLenght(citymap))
                 {
-                    if (count_update < 2)
+                    Debug.WriteLine(updates);
+                    if (updates < 2)
                     {
-                        AddEdges(plotModel, best_gen.cityNumberConections, points);
-                        count_update++;
+                        AddEdges(plot, genom.cityNumberConections, points);
+                        updates++;
                     }
                     else
                     {
-                        UpdatePlot(plotModel, best_gen.cityNumberConections, points);
-                        count_update++;
+                        UpdatePlot(plot, genom.cityNumberConections, points);
+                        updates++;
                     }
                 }
             }
         }
-
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
             RunFlag = false;
+            Debug.WriteLine($"Stop button: {RunFlag}");
         }
         private PlotModel CreatePlotModel(int[] connectedVertices, Point[] positions)
         {

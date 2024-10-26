@@ -5,7 +5,7 @@
     <version>0.1.0</version>
     <authors>lib</authors>
     <description>Package Description</description>
-    <repository type="git" commit="bdc4361f6ba1795504d635f3f313c8805b9be361" />
+    <repository type="git" commit="492e3e8b495f99e01184abc5eabb215f8bc96fc2" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>
