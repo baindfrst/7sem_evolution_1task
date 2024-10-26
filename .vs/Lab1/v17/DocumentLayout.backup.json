@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{50507AF5-A757-440A-A630-6424BA9E487B}|lib\\lib.csproj|c:\\users\\n1117\\codes_note\\sharp_lab\\lab1\\lib\\population.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50507AF5-A757-440A-A630-6424BA9E487B}|lib\\lib.csproj|solutionrelative:lib\\population.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|c:\\users\\n1117\\codes_note\\sharp_lab\\lab1\\wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|c:\\users\\n1117\\codes_note\\sharp_lab\\lab1\\wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|c:\\users\\n1117\\codes_note\\sharp_lab\\lab1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50507AF5-A757-440A-A630-6424BA9E487B}|lib\\lib.csproj|c:\\users\\n1117\\codes_note\\sharp_lab\\lab1\\lib\\genom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50507AF5-A757-440A-A630-6424BA9E487B}|lib\\lib.csproj|solutionrelative:lib\\genom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|c:\\users\\n1117\\codes_note\\sharp_lab\\lab1\\wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2D33AA28-CF1E-4BA2-B006-086D0D93B32B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF8BF9CD-8753-4541-A3EB-7F3A40E02C23}|program\\program.csproj|c:\\users\\n1117\\codes_note\\sharp_lab\\lab1\\program\\program.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BF8BF9CD-8753-4541-A3EB-7F3A40E02C23}|program\\program.csproj|solutionrelative:program\\program.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,72 +22,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 114,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WpfApp1",
-              "DocumentMoniker": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\WpfApp1.csproj",
-              "RelativeDocumentMoniker": "WpfApp1\\WpfApp1.csproj",
-              "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\WpfApp1.csproj",
-              "RelativeToolTip": "WpfApp1\\WpfApp1.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-25T18:59:25.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "program",
-              "DocumentMoniker": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\program\\program.csproj",
-              "RelativeDocumentMoniker": "program\\program.csproj",
-              "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\program\\program.csproj",
-              "RelativeToolTip": "program\\program.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-25T18:59:14.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Genom.cs",
-              "DocumentMoniker": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\lib\\Genom.cs",
-              "RelativeDocumentMoniker": "lib\\Genom.cs",
-              "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\lib\\Genom.cs",
-              "RelativeToolTip": "lib\\Genom.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:56:56.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\MainWindow.xaml.cs*",
-              "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs*",
-              "ViewState": "AgIAABwAAAAAAAAAAAAYwEgAAAAVAAAAAAAAAA==",
+              "Title": "Population.cs",
+              "DocumentMoniker": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\lib\\Population.cs",
+              "RelativeDocumentMoniker": "lib\\Population.cs",
+              "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\lib\\Population.cs",
+              "RelativeToolTip": "lib\\Population.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv1oAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:43:23.82Z",
+              "WhenOpened": "2024-10-26T12:26:30.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\App.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\App.xaml",
-              "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\App.xaml",
-              "RelativeToolTip": "WpfApp1\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-25T18:59:41.863Z",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAcwGQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T12:26:26.919Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "f7b569e9-d06c-461f-815d-4fb08c3b5660",
+        "Display": 0,
+        "X": 32,
+        "Y": 74,
+        "Width": 1654,
+        "Height": 862,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -109,7 +80,7 @@
               "ToolTip": "C:\\Users\\n1117\\CODES_NOTE\\SHARP_LAB\\Lab1\\WpfApp1\\MainWindow.xaml",
               "RelativeToolTip": "WpfApp1\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-25T18:42:05.179Z",
+              "WhenOpened": "2024-10-26T12:26:22.217Z",
               "EditorCaption": ""
             }
           ]

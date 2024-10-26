@@ -28,7 +28,6 @@ internal class main
         //MultiPopulationWork MP = new MultiPopulationWork(2, 8, testmap, 4);
         //MP.Run();
         Population population = new Population(5, testmap, 3);
-        population.RunMulti(4);
     }
     public static int[][] GenMatrixCity(int size)
     {

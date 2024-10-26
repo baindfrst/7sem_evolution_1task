@@ -1,4 +1,6 @@
-﻿namespace lib;
+﻿using System.Diagnostics;
+
+namespace lib;
 
 public class Population
 {
@@ -84,8 +86,9 @@ public class Population
         Console.WriteLine(this.GetEpochResult());
         while (true)
         {
-            if (allstop)
+            if (!allstop)
             {
+                Console.WriteLine("ALL STOPED");
                 break;
             }
             this.GenNewEpoch();
@@ -97,11 +100,11 @@ public class Population
             {
                 resultsolution = this.genomsresult.Min();
                 outputGenom = this.genArray[genomsresult.IndexOf(resultsolution)].ClonePopulation();
-                Console.WriteLine(this.GetEpochResult());
+                Debug.WriteLine(this.GetEpochResult());
             }
         }
-        allstop = true;
-        Console.WriteLine(this.GetEpochResult());
+        allstop = false;
+        Debug.WriteLine(this.GetEpochResult());
     }
     public override string ToString()
     {
@@ -122,28 +125,5 @@ public class Population
     private void MutateRandomGen()
     {
         genArray[new Random().Next(0, genArray.Length)].GenomMutation();
-    }
-
-
-    public Genom RunMulti(int count)
-    {
-        Genom bestgen = new Genom(WayLengMap.Length);
-        bestgen.CalculateGenomWayLenght(WayLengMap);
-        Console.WriteLine(bestgen.GenomScore);
-
-        bool allPopulationStop = false;
-        Console.CancelKeyPress += (sender, e) =>
-        {
-            e.Cancel = true;
-            allPopulationStop = true;
-        };
-        Parallel.For(0, count, i =>
-        {
-            Population tm = new Population(genArray.Length, WayLengMap, learningRate, i);
-            tm.StartPopulationEvolution(ref bestgen, ref allPopulationStop);
-        });
-        Console.WriteLine("FIN");
-        Console.WriteLine(bestgen.GenomScore);
-        return bestgen;
     }
 }
