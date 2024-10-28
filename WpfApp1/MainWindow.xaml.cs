@@ -19,6 +19,8 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    /// перестроить механизм остановки на встроенный в Parallel, убрать plot из либы, добавить callback в геном в случае изменения и уже тут его обрабатывать, блочить потоки и отрисовывать картнику, после чего разблочить.
     public partial class MainWindow : Window
     {
         public bool RunFlag = true;
@@ -26,7 +28,7 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
-        private async void SubmitButton_Click(object sender, RoutedEventArgs e)
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             RunFlag = true;
             int count_population, count_city, lr, count_threads = 0;
@@ -40,7 +42,8 @@ namespace WpfApp1
             Genom genom_rez = new Genom(count_city);
             PlotMC plot_cl = new PlotMC(count_city, genom_rez.cityNumberConections);
             plot.Model = plot_cl.plot;
-            //RunMulti(count_threads, genom_rez, count_population, city_map_gen, lr, plot_cl);
+            Debug.WriteLine("PLOT ADDED");
+            RunMulti(count_threads, genom_rez, count_population, city_map_gen, lr, plot_cl);
         }
 
         public Genom RunMulti(int count_thread, Genom bestgen, int count_population, int[][] WayLengMap, int lr, PlotMC plot)
