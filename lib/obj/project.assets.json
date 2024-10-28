@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "OxyPlot.Core/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/OxyPlot.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/OxyPlot.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OxyPlot.Core/2.2.0": {
+      "sha512": "QhXNdXR5FPpro/VoLx3BOp6AhQo7YrbfmWEZ9cgY+pnYM7RYORZjnu+aDMA8ka9A1r8hLkX//NbCPZNUv+l8qA==",
+      "type": "package",
+      "path": "oxyplot.core/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OxyPlot_128.png",
+        "README.md",
+        "lib/net462/OxyPlot.dll",
+        "lib/net462/OxyPlot.xml",
+        "lib/net6.0/OxyPlot.dll",
+        "lib/net6.0/OxyPlot.xml",
+        "lib/net8.0/OxyPlot.dll",
+        "lib/net8.0/OxyPlot.xml",
+        "lib/netstandard2.0/OxyPlot.dll",
+        "lib/netstandard2.0/OxyPlot.xml",
+        "oxyplot.core.2.2.0.nupkg.sha512",
+        "oxyplot.core.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "OxyPlot.Core >= 2.2.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\n1117\\.nuget\\packages\\": {}
@@ -50,6 +88,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "OxyPlot.Core": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

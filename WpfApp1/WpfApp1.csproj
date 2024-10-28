@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="OxyPlot.Wpf" Version="2.2.0" />
-    <PackageReference Include="QuickGraph" Version="3.6.61119.7" />
   </ItemGroup>
 
   <ItemGroup>
