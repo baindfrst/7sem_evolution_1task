@@ -22,3 +22,4 @@ C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.dll
 C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\refint\lib.dll
 C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.pdb
 C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\ref\lib.dll
+C:\Users\n1117\CODES_NOTE\SHARP_LAB\Lab1\lib\obj\Debug\net8.0\lib.csproj.AssemblyReference.cache

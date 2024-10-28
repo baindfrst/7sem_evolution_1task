@@ -5,9 +5,11 @@
     <version>0.1.0</version>
     <authors>lib</authors>
     <description>Package Description</description>
-    <repository type="git" commit="492e3e8b495f99e01184abc5eabb215f8bc96fc2" />
+    <repository type="git" commit="ef033dd23766d94e7a5baa742c7eb097fc631ad7" />
     <dependencies>
-      <group targetFramework="net8.0" />
+      <group targetFramework="net8.0">
+        <dependency id="OxyPlot.Core" version="2.2.0" exclude="Build,Analyzers" />
+      </group>
     </dependencies>
   </metadata>
   <files>

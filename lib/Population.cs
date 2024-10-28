@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
-
+using System.Windows;
+using OxyPlot;
 namespace lib;
 
 public class Population
@@ -79,7 +80,7 @@ public class Population
         return $"population number {numPopulation}: Epoch: {numEpoch}, best result is: {this.resultsolution} at genom\n {this.bestGen}\n";
     }
 
-    public void StartPopulationEvolution(ref Genom outputGenom, ref bool allstop)
+    public void StartPopulationEvolution(ref Genom outputGenom, ref bool allstop, PlotMC plot)
     {
         this.CalculateSolutionsLenght();
         resultsolution = this.genomsresult.Min();
@@ -92,15 +93,16 @@ public class Population
                 break;
             }
             this.GenNewEpoch();
-            if(resultsolution > this.genomsresult.Min())
-            {
-                resultsolution = this.genomsresult.Min();
-            }
+            //if(resultsolution > this.genomsresult.Min())
+            //{
+            //    resultsolution = this.genomsresult.Min();
+            //}
             if (outputGenom.CalculateGenomWayLenght(WayLengMap) > this.genomsresult.Min())
             {
                 resultsolution = this.genomsresult.Min();
                 outputGenom = this.genArray[genomsresult.IndexOf(resultsolution)].ClonePopulation();
                 Debug.WriteLine(this.GetEpochResult());
+                plot.PlotNewDrow(outputGenom.cityNumberConections);
             }
         }
         allstop = false;
